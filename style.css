@@ -4,6 +4,8 @@
   font-family: "Ubuntu", sans-serif;
   box-sizing: border-box;
   text-decoration: none;
+
+  overflow: hidden;
 }
 
 body {
@@ -130,4 +132,34 @@ body {
   width: 1px;
   height: 30px;
   background: #bbb;
+}
+.profile-card .name {
+  position: relative;
+  top: 10%;
+  width: 15em;
+  margin: 0 auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateX(-10%);
+  transform: translateX(-1%);
+}
+.name {
+  animation: ketikan 4s steps(15) 1s 1 normal both, kedip 500ms steps(15) infinite normal;
+}
+@keyframes ketikan {
+  from {
+    width: 0em;
+  }
+  to {
+    width: 11em;
+  }
+}
+@keyframes kedip {
+  from {
+    border-right-color: white;
+  }
+  to {
+    border-right-color: transparent;
+  }
 }

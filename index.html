@@ -7,6 +7,7 @@
     <title>Ars Webs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/70310fb7f3.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="profile-card">
@@ -22,7 +23,9 @@
           <a href="https://www.instagram.com/a.rs_20" target="_blank" class="fab fa-instagram"></a>
           <a href="https://t.me/Ars2009" target="_blank" class="fab fa-telegram"></a>
         </div>
-        <a href="#" class="contact-btn" title="Hubungi saya lewat Media sosial di atas">Contact Me</a>
+        <ul class="bu">
+          <li><span class="themeSwitch"></span></li>
+        </ul>
       </div>
       <div class="card-footer">
         <div class="numbers">
@@ -43,5 +46,13 @@
         </div>
       </div>
     </div>
+    <script>
+      let themeSwitch = document.querySelector(`.themeSwitch`);
+      let body = document.querySelector(`body`);
+      themeSwitch.onclick = function () {
+        themeSwitch.classList.toggle(`active`);
+        body.classList.toggle(`dark`);
+      };
+    </script>
   </body>
 </html>

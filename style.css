@@ -1,3 +1,17 @@
+:root {
+  --pink: #e66767;
+  --black: #2c3a47;
+  --blue: #74b9ff;
+  --pink2: #f2f2f2;
+  --putih: #f4f4f4;
+}
+.dark {
+  --pink: #000000;
+  --blue: #ffffff;
+  --black: #000000;
+  --putih: #cec9c9ab;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -25,14 +39,14 @@ body {
 }
 
 .card-header {
-  background: #2c3a47;
+  background: var(--black);
   padding: 60px 40px;
 }
 
 .pic {
   display: inline-block;
   padding: 8px;
-  background: linear-gradient(130deg, #74b9ff, #e66767);
+  background: linear-gradient(130deg, var(--blue), var(--pink));
   margin: auto;
   border-radius: 50%;
   background-size: 200% 200%;
@@ -89,24 +103,37 @@ body {
 .sm a:hover {
   color: #e66767;
 }
-
-.contact-btn {
-  display: inline-block;
-  padding: 12px 50px;
-  color: #e66767;
-  border: 2px solid #e66767;
-  border-radius: 6px;
-  margin-top: 16px;
-  transition: 0.3s linear;
+.themeSwitch {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  background: var(--pink);
+  display: inline-flex;
+  border-radius: 50%;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
 }
-
-.contact-btn:hover {
-  background: #e66767;
-  color: #f2f2f2;
+.themeSwitch::before {
+  content: "\f186";
+  font-family: fontAwesome;
+  color: var(--pink2);
+  font-size: 20px;
 }
-
+.themeSwitch.active::before {
+  content: "\f185";
+  font-family: fontAwesome;
+  color: var(--black);
+  background: var(--pink2);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+}
 .card-footer {
-  background: #f4f4f4;
+  background: var(--putih);
   padding: 60px 10px;
 }
 
@@ -119,7 +146,7 @@ body {
   flex: 1;
   text-transform: uppercase;
   font-size: 13px;
-  color: #e66767;
+  color: var(--pink);
 }
 
 .item span {

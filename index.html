@@ -46,12 +46,22 @@
         </div>
       </div>
     </div>
+
+    <!-- --------style cursor-------- -->
+    <div id="cursor"></div>
+
     <script>
       let themeSwitch = document.querySelector(`.themeSwitch`);
       let body = document.querySelector(`body`);
       themeSwitch.onclick = function () {
         themeSwitch.classList.toggle(`active`);
         body.classList.toggle(`dark`);
+      };
+      var cursor = document.getElementById("cursor");
+      document.onmousemove = function (e) {
+        cursor.style.left = e.pageX - 25 + "px";
+        cursor.style.top = e.pageY - 25 + "px";
+        cursor.style.display = "block";
       };
     </script>
   </body>

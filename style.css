@@ -80,11 +80,13 @@ body {
   font-size: 28px;
   font-weight: 600;
   margin: 10px 0;
+  z-index: 2;
 }
 
 .desc {
   font-size: 18px;
   color: #e66767;
+  z-index: 2;
 }
 
 .sm {
@@ -98,10 +100,12 @@ body {
   width: 56px;
   font-size: 22px;
   transition: 0.3s linear;
+  z-index: 2;
 }
 
 .sm a:hover {
   color: #e66767;
+  z-index: 2;
 }
 .themeSwitch {
   position: relative;
@@ -113,12 +117,14 @@ body {
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 .themeSwitch::before {
   content: "\f186";
   font-family: fontAwesome;
   color: var(--pink2);
   font-size: 20px;
+  z-index: 2;
 }
 .themeSwitch.active::before {
   content: "\f185";
@@ -140,6 +146,7 @@ body {
 .numbers {
   display: flex;
   align-items: center;
+  z-index: 2;
 }
 
 .item {
@@ -147,6 +154,7 @@ body {
   text-transform: uppercase;
   font-size: 13px;
   color: var(--pink);
+  z-index: 2;
 }
 
 .item span {
@@ -189,4 +197,18 @@ body {
   to {
     border-right-color: transparent;
   }
+}
+#cursor {
+  width: 50px;
+  height: 50px;
+  background: var(--blue);
+  position: absolute;
+  border-radius: 50%;
+  display: block;
+  cursor: grab;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+div:hover ~ #cursor {
+  transform: scale(0.5);
 }

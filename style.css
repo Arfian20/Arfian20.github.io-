@@ -167,6 +167,16 @@ body {
 .project a{
   color: #fff;
 }
+.project.uiux{
+  background: transparent;
+  border: 1px solid #e66767;
+  border-radius: 5px;
+  padding: 8px;
+  font-family: "Poppins", sans-serif;
+}
+.project.uiux a{
+  color: #fff;
+}
 .numbers {
   display: flex;
   align-items: center;

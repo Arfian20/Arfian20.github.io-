@@ -28,7 +28,7 @@
         </div>
         <ul >
           <li><button class="project"><a href="https://konsultanku.co.id/">See my project</a></button></li> <br>
-          <li><button class="project uiux"><a href="https://docs.google.com/document/d/1w_sM8u7BMrraDiAm5k9ar5NExQX8er4DexyhwGu7nAQ/edit">How i research for UI/UX</a></button></li>
+          <li><button class="project uiux"><a href="https://drive.google.com/file/d/1Mqp_Uj0iEIncafXcn1-uQTw6rakek8ee/view?usp=sharing">How i research for UI/UX</a></button></li> <br>
         </ul>
       </div>
       <div class="card-footer">
@@ -53,7 +53,7 @@
 
     <!-- --------style cursor-------- -->
     <div id="cursor"></div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
       let themeSwitch = document.querySelector(`.themeSwitch`);
       let body = document.querySelector(`body`);
@@ -67,6 +67,27 @@
         cursor.style.top = e.pageY - 25 + "px";
         cursor.style.display = "block";
       };
+
+
+      $('#GetFile').on('click', function () {
+    $.ajax({
+        url: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/172905/test.pdf',
+        method: 'GET',
+        xhrFields: {
+            responseType: 'blob'
+        },
+        success: function (data) {
+            var a = document.createElement('a');
+            var url = window.URL.createObjectURL(data);
+            a.href = url;
+            a.download = 'myfile.pdf';
+            document.body.append(a);
+            a.click();
+            a.remove();
+            window.URL.revokeObjectURL(url);
+        }
+    });
+});
     </script>
   </body>
 </html>

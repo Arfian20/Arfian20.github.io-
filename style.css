@@ -173,9 +173,8 @@ body {
   border-radius: 5px;
   padding: 8px;
   font-family: "Poppins", sans-serif;
-}
-.project.uiux a{
   color: #fff;
+  cursor: pointer;
 }
 .numbers {
   display: flex;

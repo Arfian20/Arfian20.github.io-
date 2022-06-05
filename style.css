@@ -175,6 +175,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: #fff;
   cursor: pointer;
+  margin-top: 5px;
 }
 .numbers {
   display: flex;
